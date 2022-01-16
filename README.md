@@ -27,7 +27,7 @@ Current features
   
   Main menu template 
 
-<img width="827" alt="Screen Shot 2022-01-16 at 11 31 34 AM" src="https://user-images.githubusercontent.com/17935336/149671247-12615c17-996f-48e7-be00-69b693ede6b5.png">
+<img width="1406" alt="Screen Shot 2022-01-16 at 11 31 34 AM" src="https://user-images.githubusercontent.com/17935336/149671247-12615c17-996f-48e7-be00-69b693ede6b5.png">
 
 Game template
 
@@ -36,8 +36,8 @@ Game template
 
 save menu template   
 
-<img width="1411" alt="Screen Shot 2022-01-16 at 11 38 47 AM 1" src="https://user-images.githubusercontent.com/17935336/149671346-0ffc1412-c644-45a7-9606-4b3a3ba492fe.png">
+<img width="1406" alt="Screen Shot 2022-01-16 at 11 39 18 AM" src="https://user-images.githubusercontent.com/17935336/149671366-9d0f6b40-b5c5-4d61-b9ce-302ed7993869.png">
 
 dialog history template 
 
-<img width="1411" alt="Screen Shot 2022-01-16 at 11 38 47 AM 1" src="https://user-images.githubusercontent.com/17935336/149671327-47bc24ee-62fb-4c80-adc5-071bfbedc389.png">
+<img width="1406" alt="Screen Shot 2022-01-16 at 11 38 47 AM 1" src="https://user-images.githubusercontent.com/17935336/149671327-47bc24ee-62fb-4c80-adc5-071bfbedc389.png">
