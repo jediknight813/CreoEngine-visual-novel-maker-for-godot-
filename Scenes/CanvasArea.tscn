@@ -1,0 +1,150 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Canvas.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SaveImage.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/CanvasArea.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Delius-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+font_data = ExtResource( 4 )
+
+[node name="CanvasDisplay" type="Node2D"]
+position = Vector2( 16.9749, 78.0845 )
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -30.0
+margin_top = -77.0
+margin_right = 1924.0
+margin_bottom = 1013.0
+color = Color( 0.760784, 0.745098, 0.745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveAngryEx" type="Button" parent="."]
+margin_left = 1485.27
+margin_top = 726.176
+margin_right = 1815.27
+margin_bottom = 858.176
+custom_fonts/font = SubResource( 1 )
+text = "save"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+file_name = "angry.png"
+
+[node name="ViewportContainer" type="ViewportContainer" parent="SaveAngryEx"]
+margin_left = -40.0
+margin_top = -653.0
+margin_right = 360.0
+margin_bottom = -25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="SaveAngryEx/ViewportContainer"]
+size = Vector2( 400, 628 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Canvas" parent="SaveAngryEx/ViewportContainer/Viewport" instance=ExtResource( 1 )]
+
+[node name="SaveIdleEx" type="Button" parent="."]
+margin_left = 831.417
+margin_top = 725.017
+margin_right = 1161.42
+margin_bottom = 857.017
+custom_fonts/font = SubResource( 1 )
+text = "save"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+file_name = "idle.png"
+
+[node name="ViewportContainer" type="ViewportContainer" parent="SaveIdleEx"]
+margin_left = -40.0
+margin_top = -653.0
+margin_right = 360.0
+margin_bottom = -25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="SaveIdleEx/ViewportContainer"]
+size = Vector2( 400, 628 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Canvas" parent="SaveIdleEx/ViewportContainer/Viewport" instance=ExtResource( 1 )]
+
+[node name="SaveHappyEx" type="Button" parent="."]
+margin_left = 194.952
+margin_top = 722.698
+margin_right = 524.952
+margin_bottom = 854.698
+custom_fonts/font = SubResource( 1 )
+text = "save"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+file_name = "happy.png"
+
+[node name="ViewportContainer" type="ViewportContainer" parent="SaveHappyEx"]
+margin_left = -40.0
+margin_top = -653.0
+margin_right = 360.0
+margin_bottom = -25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="SaveHappyEx/ViewportContainer"]
+size = Vector2( 400, 628 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Canvas" parent="SaveHappyEx/ViewportContainer/Viewport" instance=ExtResource( 1 )]
+
+[node name="Title" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 548.162
+margin_top = -75.1699
+margin_right = 1453.16
+margin_bottom = 70.8301
+custom_fonts/normal_font = SubResource( 2 )
+text = "create character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishedButton" type="Button" parent="."]
+margin_left = 833.593
+margin_top = 895.522
+margin_right = 1161.59
+margin_bottom = 1002.52
+custom_fonts/font = SubResource( 3 )
+text = "finished"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SaveAngryEx" to="SaveAngryEx" method="_on_SaveImage_pressed"]
+[connection signal="pressed" from="SaveIdleEx" to="SaveIdleEx" method="_on_SaveImage_pressed"]
+[connection signal="pressed" from="SaveHappyEx" to="SaveHappyEx" method="_on_SaveImage_pressed"]
+[connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]

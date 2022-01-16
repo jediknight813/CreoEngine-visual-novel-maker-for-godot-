@@ -1,0 +1,354 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://Fonts/Inter-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/TextBox.gd" type="Script" id=2]
+[ext_resource path="res://Ui/arrow.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Delius-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0.0470588, 0.0431373, 0.0431373, 0.815686 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=129]
+size = 400
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 400
+font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 512, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=108]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 640, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=123]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 896, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 896, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 896, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=127]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 896, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ) ],
+"loop": true,
+"name": "Default",
+"speed": 30.0
+} ]
+
+[node name="TextBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.012
+margin_left = 26.2941
+margin_top = 540.941
+margin_right = -895.706
+margin_bottom = -216.019
+rect_scale = Vector2( 1.88114, 1.76042 )
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextBackground" type="Panel" parent="."]
+margin_left = 33.0
+margin_top = 98.4806
+margin_right = 989.0
+margin_bottom = 322.481
+custom_styles/panel = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameBackground" type="Panel" parent="."]
+margin_left = 35.0
+margin_top = 50.0
+margin_right = 238.0
+margin_bottom = 90.0
+custom_styles/panel = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 51.0
+margin_top = 110.0
+margin_right = 14614.0
+margin_bottom = 1634.0
+rect_scale = Vector2( 0.0632959, 0.0894064 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/bold_font = SubResource( 129 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 950.767, 260.359 )
+scale = Vector2( 0.358808, 0.279365 )
+frames = SubResource( 6 )
+animation = "Default"
+frame = 52
+playing = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = -25.0
+margin_top = 50.0
+margin_right = 5771.0
+margin_bottom = 550.0
+rect_scale = Vector2( 0.0701934, 0.0809954 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterNameText" type="RichTextLabel" parent="CenterContainer"]
+margin_left = 1498.0
+margin_right = 4298.0
+margin_bottom = 504.0
+rect_min_size = Vector2( 2800, 500 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/bold_font = SubResource( 129 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

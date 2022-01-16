@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Sans/JosefinSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/new_styleboxflat.tres" type="StyleBox" id=2]
+[ext_resource path="res://Scenes/SettingsMenu.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Inter-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.952941, 0.952941, 0.952941, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 4 )
+
+[node name="SettingsMenu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Panel" parent="."]
+margin_left = -9.0
+margin_top = -6.0
+margin_right = 1929.0
+margin_bottom = 1080.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsText" type="Label" parent="."]
+margin_left = 716.72
+margin_top = 71.2581
+margin_right = 1073.72
+margin_bottom = 181.258
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicVolumeText" type="Label" parent="."]
+margin_left = 156.03
+margin_top = 264.203
+margin_right = 763.03
+margin_bottom = 374.203
+rect_scale = Vector2( 0.805466, 0.736943 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "music volume:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextSpeedText" type="Label" parent="."]
+visible = false
+margin_left = 52.1991
+margin_top = 308.601
+margin_right = 627.199
+margin_bottom = 418.601
+rect_scale = Vector2( 0.805466, 0.736943 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Text speed:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundFxVolumeText" type="Label" parent="."]
+visible = false
+margin_left = 54.0981
+margin_top = 227.722
+margin_right = 629.098
+margin_bottom = 319.722
+rect_scale = Vector2( 0.62592, 0.755821 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Sound fx volume:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicVolumeSlider" type="HSlider" parent="."]
+margin_left = 666.182
+margin_top = 257.589
+margin_right = 1590.18
+margin_bottom = 294.589
+rect_scale = Vector2( 1.21889, 2.33413 )
+min_value = -24.0
+max_value = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundFxVolumeSlider" type="HSlider" parent="."]
+visible = false
+margin_left = 532.623
+margin_top = 240.791
+margin_right = 906.623
+margin_bottom = 272.791
+rect_scale = Vector2( 1.21889, 2.33413 )
+min_value = -24.0
+max_value = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextSpeedVolumeSlider" type="HSlider" parent="."]
+visible = false
+margin_left = 472.161
+margin_top = 318.777
+margin_right = 846.161
+margin_bottom = 350.777
+rect_scale = Vector2( 1.21889, 2.33413 )
+value = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseSettingsMenuButton" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 812.0
+margin_top = 975.0
+margin_right = 1109.0
+margin_bottom = 1047.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="MusicVolumeSlider" to="." method="_on_MusicVolumeSlider_value_changed"]
+[connection signal="value_changed" from="SoundFxVolumeSlider" to="." method="_on_SoundFxVolumeSlider_value_changed"]
+[connection signal="pressed" from="CloseSettingsMenuButton" to="." method="_on_CloseSettingsMenuButton_pressed"]

@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/DialogHistory.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/new_styleboxflat.tres" type="StyleBox" id=2]
+[ext_resource path="res://Fonts/Inter-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Fonts/Sans/JosefinSans-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.858824, 0.85098, 0.87451, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+font_data = ExtResource( 4 )
+
+[node name="DialogHistory" type="Control"]
+anchor_right = 0.996
+anchor_bottom = 0.988
+margin_right = 0.679932
+margin_bottom = -0.0400391
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="."]
+margin_left = -9.0
+margin_top = -16.0
+margin_right = 1921.0
+margin_bottom = 1081.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 13.7005
+margin_top = 929.766
+margin_right = 391.701
+margin_bottom = 1061.77
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 771.038
+margin_top = 9.97171
+margin_right = 1462.04
+margin_bottom = 252.972
+rect_scale = Vector2( 0.469305, 0.482291 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "history"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+margin_left = 408.964
+margin_top = 109.413
+margin_right = 1429.96
+margin_bottom = 916.413
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VScrollBar" type="VBoxContainer" parent="ScrollContainer2"]
+custom_constants/separation = 300
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]

@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/new_styleboxflat.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scenes/SaveLoad.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Sans/JosefinSans-Bold.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.337255, 0.333333, 0.333333, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 500
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="SaveLoad" type="Control"]
+anchor_right = 0.205
+anchor_bottom = 0.243
+margin_right = -209.92
+margin_bottom = -145.8
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 32.0723
+margin_top = 17.4788
+margin_right = 227.072
+margin_bottom = 183.479
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="."]
+visible = false
+margin_left = 34.3531
+margin_top = 98.6315
+margin_right = 115.353
+margin_bottom = 139.632
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+enabled_focus_mode = 0
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadButton" type="Button" parent="."]
+margin_left = 42.9589
+margin_top = 134.115
+margin_right = 246.959
+margin_bottom = 222.115
+rect_scale = Vector2( 0.400287, 0.394668 )
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+enabled_focus_mode = 0
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteButton" type="Button" parent="."]
+margin_left = 143.279
+margin_top = 135.074
+margin_right = 429.279
+margin_bottom = 225.074
+rect_scale = Vector2( 0.262609, 0.389834 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+text = "Delete"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 39.0
+margin_top = 34.0
+margin_right = 4212.0
+margin_bottom = 1313.0
+rect_scale = Vector2( 0.043491, 0.052311 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveText" type="Label" parent="CenterContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 1347.0
+margin_top = 389.0
+margin_right = 2825.0
+margin_bottom = 889.0
+custom_fonts/font = SubResource( 4 )
+text = "Save 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_LoadButton_pressed"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_DeleteButton_pressed"]

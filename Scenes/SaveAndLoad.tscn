@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/new_styleboxflat.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scenes/SaveAndLoad.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Delius-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+font_data = ExtResource( 3 )
+
+[node name="SaveAndLoad" type="Control"]
+rect_scale = Vector2( 1.85922, 1.77549 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -3.0
+margin_top = -4.0
+margin_right = 1037.0
+margin_bottom = 612.0
+color = Color( 0.858824, 0.839216, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseMenuButton" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 145.272
+margin_top = 522.401
+margin_right = 1087.27
+margin_bottom = 891.401
+rect_scale = Vector2( 0.284889, 0.195799 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveGameButton" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 609.897
+margin_top = 520.0
+margin_right = 2416.9
+margin_bottom = 894.0
+rect_scale = Vector2( 0.147926, 0.19647 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+text = "save game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 119.0
+margin_top = 135.0
+margin_right = 901.0
+margin_bottom = 442.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+custom_constants/separation = 250
+
+[node name="LoadGameText" type="Label" parent="."]
+margin_left = 397.991
+margin_top = 26.8175
+margin_right = 1875.0
+margin_bottom = 403.817
+rect_scale = Vector2( 0.172494, 0.178408 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "load game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CloseMenuButton" to="." method="_on_CloseMenuButton_pressed"]
+[connection signal="pressed" from="SaveGameButton" to="." method="_on_SaveGameButton_pressed"]

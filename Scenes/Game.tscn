@@ -1,0 +1,170 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/TextBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SceneBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Game.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/SceneScripts.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Choices.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Characters/TemplateCharacter/TEST.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/Sans/JosefinSans-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scenes/MenuOptions.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/SaveAndLoad.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/GameMusic.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/DialogHistory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/SettingsMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Character.gd" type="Script" id=16]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "angry",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="BitmapFont" id=3]
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 8 )
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="SceneBackground" parent="." instance=ExtResource( 2 )]
+position = Vector2( -10.7769, -0.348328 )
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="PlayerCharacter" type="Node2D" parent="Characters"]
+visible = false
+position = Vector2( 58.7534, -178.418 )
+scale = Vector2( 2.02764, 1.58405 )
+script = ExtResource( 16 )
+
+[node name="CharacterSprite" type="AnimatedSprite" parent="Characters/PlayerCharacter"]
+position = Vector2( 890.204, 522.968 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="CharacterPostionOne" type="Position2D" parent="Characters/PlayerCharacter"]
+position = Vector2( 88.1454, 520.093 )
+
+[node name="CharacterPostionTwo" type="Position2D" parent="Characters/PlayerCharacter"]
+position = Vector2( 350.689, 523.304 )
+
+[node name="CharacterPostionThree" type="Position2D" parent="Characters/PlayerCharacter"]
+position = Vector2( 644.56, 521.112 )
+
+[node name="CharacterPostionFour" type="Position2D" parent="Characters/PlayerCharacter"]
+position = Vector2( 893.646, 521.821 )
+
+[node name="Diva" parent="Characters" instance=ExtResource( 3 )]
+position = Vector2( -27, -176 )
+
+[node name="CharacterSprite" parent="Characters/Diva" index="0"]
+position = Vector2( 818.285, 556.008 )
+scale = Vector2( 0.833592, 0.551139 )
+frames = SubResource( 1 )
+animation = "happy"
+
+[node name="SceneScripts" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1.43954, 14.9159 )
+
+[node name="TextBox" parent="." instance=ExtResource( 1 )]
+margin_left = 17.7842
+margin_top = 656.116
+margin_right = 17.7842
+margin_bottom = 656.116
+rect_scale = Vector2( 1.87956, 1.50637 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -25.0
+margin_top = -33.0
+margin_right = 1978.0
+margin_bottom = 1018.0
+focus_mode = 0
+theme = SubResource( 4 )
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choices" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1.96571, 0.982872 )
+
+[node name="MenuOptions" parent="." instance=ExtResource( 9 )]
+position = Vector2( 127.631, -394.868 )
+scale = Vector2( 1.40192, 2.02757 )
+
+[node name="SaveAndLoad" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="GameMusic" parent="." instance=ExtResource( 11 )]
+
+[node name="DialogHistory" parent="." instance=ExtResource( 12 )]
+visible = false
+margin_left = -9.9809
+margin_top = 3.63937
+margin_right = 30.0191
+margin_bottom = 43.6394
+
+[node name="SettingsMenu" parent="." instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 3.21414, -2.73373 )
+z_index = 5
+
+[node name="DevButtonForGameData" type="Button" parent="."]
+visible = false
+margin_left = 73.0608
+margin_top = 152.34
+margin_right = 355.061
+margin_bottom = 259.34
+custom_fonts/font = SubResource( 5 )
+text = "copy game data"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="choice" from="Choices" to="." method="_on_Choices_choice"]
+[connection signal="go_to_previous_event" from="MenuOptions" to="." method="_on_MenuOptions_go_to_previous_event"]
+[connection signal="open_history" from="MenuOptions" to="DialogHistory" method="_on_MenuOptions_open_history"]
+[connection signal="open_settings_menu" from="MenuOptions" to="." method="_on_MenuOptions_open_settings_menu"]
+[connection signal="savemenu" from="MenuOptions" to="." method="_on_MenuOptions_savemenu"]
+[connection signal="skip_dialog" from="MenuOptions" to="." method="_on_MenuOptions_skip_dialog"]
+[connection signal="loadgame" from="SaveAndLoad" to="." method="_on_SaveAndLoad_loadgame"]
+[connection signal="savegame" from="SaveAndLoad" to="." method="_on_SaveAndLoad_savegame"]
+[connection signal="music_volume_changed" from="SettingsMenu" to="GameMusic" method="_on_SettingsMenu_music_volume_changed"]
+[connection signal="sound_fx_volume_changed" from="SettingsMenu" to="GameMusic" method="_on_SettingsMenu_sound_fx_volume_changed"]
+[connection signal="pressed" from="DevButtonForGameData" to="." method="_on_DevButtonForGameData_pressed"]
+
+[editable path="Characters/Diva"]
