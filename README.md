@@ -2,6 +2,11 @@ Creo Engine
 
 a free open source visual novel maker for the godot game engine.
 
+a website i made to help make the json data for scenes much easier to make: https://jediknight813.github.io/creo-story-maker/
+
+<img width="1666" alt="NewCreoMaker" src="https://user-images.githubusercontent.com/17935336/149671445-62f883b7-2708-45a9-9bce-9549c211b0cb.png">
+
+
 ![CREO](https://user-images.githubusercontent.com/17935336/127393035-32febf1b-1f17-4126-9594-5284765509fd.png)
 
 
