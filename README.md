@@ -22,7 +22,9 @@ Current features
     -character system. 
     -skip dialog system. 
     -dialog history viewer. 
-    -choice system.    
+    -choice system.
+    -bb code support
+    -character influence
   
  What i'm currently working on 
  
