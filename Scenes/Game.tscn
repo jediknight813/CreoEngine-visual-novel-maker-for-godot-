@@ -154,6 +154,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="dialog_history" from="." to="DialogHistory" method="_on_Game_dialog_history"]
+[connection signal="savegamedata" from="." to="SaveAndLoad" method="_on_Game_savegamedata"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="choice" from="Choices" to="." method="_on_Choices_choice"]
 [connection signal="go_to_previous_event" from="MenuOptions" to="." method="_on_MenuOptions_go_to_previous_event"]
