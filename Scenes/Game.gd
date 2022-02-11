@@ -70,29 +70,18 @@ func use_scene(scene, event_index):
 			if current_event[0] == "stop_audio":
 				$GameMusic.stop_music_track(i['stop_audio'])
 			
-			if current_event[0] == "choice_one_text":
+			if current_event[0] == "choices":
 				skip_dialog = false
 				$TextBox.hide()
 				$MenuOptions.hide()
-				var choice_one_text = i['choice_one_text']
-				var choice_two_text = i['choice_two_text']
-				$Choices.button_choice_text(choice_one_text, choice_two_text)
+				
+	
+				$Choices.display_choices(i["choices"])
+				#print(i["choices"])
 				while choice_picked == false:
 					yield(get_tree().create_timer(0.1), "timeout")
 				choice_picked = false
 				
-				
-				if picked_choice == "choicetwo":
-					var b = get_current_scene(i['choice_one_scene'])
-					$TextBox.show()
-					$MenuOptions.show()
-					use_scene(b, 0)
-					
-				if picked_choice == "choiceone":
-					var b = get_current_scene(i['choice_two_scene'])
-					$TextBox.show()
-					$MenuOptions.show()
-					use_scene(b, 0)
 				
 			if current_event[0] == "dialog":
 				dialog_finished = false
@@ -108,6 +97,13 @@ func use_scene(scene, event_index):
 func _on_Button_pressed():
 	if choice_picked == false:
 		dialog_finished = true
+
+
+func button_choice_change_scene(scene_name):
+	$TextBox.show()
+	get_current_scene(scene_name)
+	$MenuOptions.show()
+	use_scene(scene, 0)
 
 
 func _on_Choices_choice(choice):

@@ -52,7 +52,7 @@ margin_right = 3896.37
 margin_bottom = 973.847
 rect_scale = Vector2( 0.0754014, 0.0905255 )
 custom_fonts/font = SubResource( 1 )
-text = "Creo Novel Maker 0.1"
+text = "Creo Novel Maker 0.2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,10 +128,12 @@ margin_left = 0.941406
 margin_top = -2.36331
 margin_right = 0.941406
 margin_bottom = -2.36331
+rect_scale = Vector2( 0.991186, 0.996478 )
 
 [node name="SettingsMenu" parent="." instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 11.3717, -5.62279 )
+position = Vector2( 0.706061, -5.62279 )
+scale = Vector2( 0.532988, 0.568027 )
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_StartGameButton_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
